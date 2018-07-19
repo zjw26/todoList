@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width initial-scale=1">
+	<title>My Todo App</title>
+	<link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/jquery.datetimepicker.min.css">
+	<link rel="icon" href="img/favicon.ico">
+</head>
+<body>
+
+<div class="msg">
+    <span class="msg-content"></span>
+    <button class="anchor confirmed btn btn-info btn-sm">知道了</button>
+</div>
+<div class="container"><!--总容器开始-->
+	<h1 class="text-center">我的Todo</h1>
+	<div class="add-task">
+		<div class="row">
+			<div class="col-xs-8">
+				<input type="text" name="content" placeholder="e.g.  出门记得锁门" id="input" class="input-lg form-control">
+			</div>
+			<div class="col-xs-4">
+				<button type="submit" class="btn btn-success btn-lg">submit</button>
+			</div>
+		</div>
+	</div>
+	<div class="task-list"><!--清单列表开始-->
+		
+	</div><!--清单列表结束-->
+   
+    <div class="task-detail" style="position:fixed;">
+		<form class="form">
+			<div class="content">给对方是个</div>
+			<div class="input-item">
+				<input style="display: none;" type="text" name="content" value="给对方是个">
+			</div>
+			<div>
+				<div class="desc input-item">
+					<textarea name="desc"></textarea>
+				</div>
+			</div>
+			<div class="remind input-item">
+				<label>提醒时间</label>
+				<input class="datetime" name="remind_date" type="data" value="">
+			</div>
+			<div class="input-item">
+				<button type="submit">更新</button>
+			</div>
+		</form>
+	</div>
+	<button class="deleteAll btn btn-lg btn-danger" data-toggle="modal" data-target="#deleteAll">清空记录</button>
+	<div class="modal fade" id="deleteAll">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button class="close" data-dismiss="modal">&times;</button>
+					<h4>确定要清空所有记录吗？</h4>
+				</div>
+				<div class="modal-footer">
+					<button type='button' class="btn btn-danger" data-dismiss="modal">取消</button>
+					<button type='button' class="btn btn-info" id="yesAll" data-dismiss="modal">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="delete">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<button class="close" data-dismiss="modal">&times;</button>
+					<h4>确定删除这一项记录？</h4>
+				</div>
+				<div class="modal-footer">
+					<button type='button' class="btn btn-danger" data-dismiss="modal">取消</button>
+					<button type='button' class="btn btn-info" id="yes" data-dismiss="modal">确定</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+ <div class="task-detail-mask" style="position: fixed;"></div>
+ <video class="alerter" src="img/alert.mp3"></video>
+<script src="js/jquery.min.js"></script>
+<script src="js/base.js"></script>
+<script src="js/store.js"></script>
+<script src="js/jquery.datetimepicker.full.js"></script>
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

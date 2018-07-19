@@ -1,0 +1,192 @@
+html{
+	height:100%;
+}
+
+body{
+	height: 100%;
+	background-image: url('../img/1.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.container{
+	max-width: 80rem;
+	margin:0 auto;
+	position: relative;
+	transition: all .3s;
+}
+
+.task-item>label{
+	cursor: pointer;
+}
+
+h1{
+	background: rgba(102,102,102,.8);
+	font-size:6rem;
+	color: #eee;
+	text-shadow: 5px 5px 0 #666, 7px 7px 0 #eee;
+}
+.task-list{
+	margin:10px 0;
+}
+
+.task-item{
+	padding:10px;
+	background-color: rgb(116, 182, 239);
+    color: rgba(0,0,0,.6);
+    border-radius: 2rem;
+    margin-bottom: 0.3rem;
+	box-shadow: 0 2px 1px rgba(0,0,0,.2);
+	cursor: pointer;
+	
+}
+
+.task-item:hover{
+	background-color: rgba(255,255,255,.6);
+}
+
+.task-item>span:nth-of-type(2),
+.task-item>span:nth-of-type(3){
+	float: right;
+	padding-right:10px; 
+	line-height: 2.5rem;
+}
+
+.task-item>span:nth-of-type(2):hover,
+.task-item>span:nth-of-type(3):hover{
+	color:#000;
+}
+
+.task-item:after{
+	content:"";
+	clear:both;
+	height:0;
+	display: block;
+	visibility: auto;
+}
+
+.task-content{
+	padding-left:10px; 
+}
+
+.add-task>input,
+.remind>input,
+.datetime,
+textarea{
+	width:83%;
+	border-radius: 3px;
+	height:35px;
+	background-color: #ddd;
+	border:none;
+	box-shadow: inset 1px 2px rgba(0,0,0,.2);
+}
+
+.add-task>input:hover,
+.remind>input:hover,
+.add-task>input:focus,
+.remind>input:focus,
+.datetime:hover,
+.datetime:focus,
+textarea:hover,
+textarea:focus{
+	background-color: #fff;
+}
+
+/*.add-task>button,
+.remind>button{
+	height: 40px;
+	border-radius: 5px;
+	background: rgba(255,255,0,.3);
+	text-shadow: 0px 1px rgba(0,255,0,0.5);
+	width:15%;
+	cursor: pointer;
+}*/
+
+.task-detail-mask {
+   
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(30, 30, 30, .6);
+}
+
+.task-detail {
+    background: #fff;
+    color: #333; 
+    width:25rem;
+    height:28rem;
+    padding: 10px;
+    border-radius: 20px;
+
+    z-index: 10;
+   
+    border:20px solid rgba(0, 110, 255, 0.64);
+}
+.task-detail-mask, .task-detail {
+    position: fixed;
+    display: none;
+}
+
+
+.task-detail .content {
+    padding: 10px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.task-detail .input-item {
+    margin-bottom: 10px;
+}
+
+textarea{
+	height:100px;
+	width: 80%;
+}
+
+/*.input-item button{
+	border-radius: 3px;
+	background: rgba(255,255,0,0.3);
+	cursor:pointer;
+}
+*/
+.action{
+	
+	font-size: 90%;
+	z-index: 10;
+}
+
+
+.task-item.completed {
+    color: #aaa;
+    /* background: rgba(255,255,255,.7); */
+    opacity: 0.6;
+}
+
+.task-item.completed:after {
+    content: " ";
+    height: 1px;
+    background: #aaa;
+    width: 96%;
+    position: relative;
+    top: -1.5rem;
+    right: 0.6rem;
+    display: block;
+    float: right;
+}
+
+.deleteAll{
+	position: absolute;
+	bottom: -4rem;
+    right: 1rem;
+}
+
+.msg {
+    display: none;
+    text-align: center;
+    background: rgba(163, 230, 169, 0.69);
+    padding: 10px;
+    color: #333;
+    cursor: pointer;
+}
